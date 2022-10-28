@@ -44,3 +44,13 @@ Attendez, ça devient intéressant :
 Nous avons récemment signé un partenariat avec un fournisseur de produit invoqué ("Conjured"). Cela nécessite une mise à jour de notre système :
 
 - Les éléments "Conjured" voient leur qualité se dégrader de deux fois plus vite que les objets normaux.
+
+---
+
+@author : sasha-laurent
+## Pistes d'amélioration
+- Créer des "types" d'item, soit en étendant la classe item, soit en énumérant les types possibles et en ajoutant une propriété de type à l'item. Cela permettrait de ne plus se baser sur le nom de l'item pour savoir quoi lui appliquer
+- Continuer les tests "unitaires", par type d'item
+- Améliorer le "main" (Shop::updateQuality) : actuellement le bon respect des règles métier est fortement corrélé à l'ordre d'exécution des instructions. Ceci peut engendrer des bugs lors de futures évolutions. Il serait sage d'adopter une approche plus sûre, en traitant chaque type d'objet indépendamment par exemple ? ou mieux si vous trouvez ;)
+
+
